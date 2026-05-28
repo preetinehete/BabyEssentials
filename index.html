@@ -147,27 +147,35 @@
 <div id="setup">
   <div class="setup-card">
     <h2>Baby Essentials Tracker</h2>
-    <p>A shared real-time research tool for you and your husband. Paste your JSONBin API key to get started — data syncs live between both of you.</p>
-    <div class="setup-steps">
-      1. Go to <a href="https://jsonbin.io" target="_blank">jsonbin.io</a> and create a free account<br>
-      2. Click <strong>API Keys</strong> → copy your <strong>Master Key</strong><br>
-      3. Paste it below and click Start — your tracker will be created automatically
-    </div>
+    <p>Your shared baby shopping tracker. Takes 2 minutes to set up — free.</p>
+
+    <details style="margin-bottom:16px">
+      <summary style="font-size:12px;color:#1a6cc0;cursor:pointer;list-style:none">▸ How to get your free JSONBin key</summary>
+      <div class="setup-steps" style="margin-top:8px">
+        1. Go to <a href="https://jsonbin.io" target="_blank">jsonbin.io</a> → Sign up free<br>
+        2. Click <strong>API Keys</strong> in the top menu<br>
+        3. Copy your <strong>Master Key</strong> and paste below
+      </div>
+    </details>
+
     <div style="margin-bottom:14px">
-      <div class="field-label">JSONBin Master Key</div>
+      <div class="field-label">JSONBin Key <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px">— saves &amp; syncs your data</span></div>
       <input class="field-input" id="apiKeyInput" type="password" placeholder="$2b$10$...">
-      <div class="setup-hint">Stored only in your browser. Share this page URL + key with your husband.</div>
     </div>
+
     <div style="margin-bottom:14px">
-      <div class="field-label">Anthropic API Key <span style="font-weight:400;text-transform:none;letter-spacing:0">(for auto-fetch feature)</span></div>
-      <input class="field-input" id="anthropicKeyInput" type="password" placeholder="sk-ant-...">
-      <div class="setup-hint">Get it free at <a href="https://console.anthropic.com" target="_blank" style="color:#1a6cc0">console.anthropic.com</a> → API Keys. Used only in your browser to fetch product info.</div>
+      <div class="field-label">Bin ID <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px">— leave blank first time</span></div>
+      <input class="field-input" id="binIdInput" type="text" placeholder="Leave blank to create a new tracker">
     </div>
-    <div style="margin-bottom:14px">
-      <div class="field-label">Bin ID <span style="font-weight:400;text-transform:none;letter-spacing:0">(leave blank to create new)</span></div>
-      <input class="field-input" id="binIdInput" type="text" placeholder="e.g. 64a1f2...">
-      <div class="setup-hint">If you already have a tracker, paste the Bin ID here. Otherwise leave blank.</div>
-    </div>
+
+    <details style="margin-bottom:14px">
+      <summary style="font-size:12px;color:#999;cursor:pointer;list-style:none">▸ Optional: Anthropic key (for smart product search)</summary>
+      <div style="margin-top:8px">
+        <div class="setup-hint" style="margin-bottom:6px">Needed only if you want to paste a URL or describe a product and have details auto-filled. Get it free at <a href="https://console.anthropic.com" target="_blank" style="color:#1a6cc0">console.anthropic.com</a> → API Keys.</div>
+        <input class="field-input" id="anthropicKeyInput" type="password" placeholder="sk-ant-... (optional)">
+      </div>
+    </details>
+
     <button class="btn btn-primary" style="width:100%;background:#1a1a1a;color:#fff;padding:10px;font-size:13px;border-radius:8px" onclick="startTracker()">Start Tracker →</button>
     <div id="setup-err" style="color:#c0392b;font-size:12px;margin-top:10px;display:none"></div>
   </div>
