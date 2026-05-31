@@ -29,25 +29,28 @@ tr.row-best:hover td{background:#E8F5EC}
 tr.row-added td{background:#F0F4FF}
 tr.row-added td:first-child{border-left:3px solid #1a6cc0}
 tr.row-added:hover td{background:#E5ECFF}
+tr.row-purchased td{background:#F8F8F8;opacity:.7}
+tr.row-purchased td:first-child{border-left:3px solid #22863a}
+tr.row-purchased td *{color:#888 !important}
 .tag{display:inline-block;font-size:10px;padding:1px 7px;border-radius:999px;font-weight:500;margin:1px 2px 1px 0;white-space:nowrap}
 .tag-green{background:#D4EDDA;color:#1a5c2a}
 .tag-red{background:#FDECEA;color:#8B1A1A}
 .tag-blue{background:#D6EAF8;color:#1a4e7a}
 .tag-grey{background:#F0F0EE;color:#555}
 .tag-amber{background:#FFF3CD;color:#7a5500}
-.tag-purple{background:#EDE7F6;color:#4a235a}
 .status{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
 .s-sheet{background:#D4EDDA;color:#1a5c2a}
 .s-compare{background:#FFF3CD;color:#7a5500}
 .s-added{background:#D6EAF8;color:#1a4e7a}
+.s-purchased{background:#1a1a1a;color:#fff}
 .tbl-link{color:#1a6cc0;text-decoration:none;font-size:11px;white-space:nowrap;font-weight:500}
 .tbl-link:hover{text-decoration:underline}
 .price-blank{color:#bbb;font-weight:400;font-style:italic;font-size:11px}
 .cell-note{font-size:10.5px;color:#888;display:block;margin-top:2px;font-style:italic}
-.legend{display:flex;gap:16px;flex-wrap:wrap;padding:8px 14px;background:#fff;border-bottom:1px solid #E8E8E5;font-size:11px;color:#666}
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:9px 20px;background:#fff;border-bottom:1px solid #E8E8E5;font-size:11px;color:#666;align-items:center}
 .legend-item{display:flex;align-items:center;gap:5px}
 .legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
-@media(max-width:600px){main{padding:0 8px}th,td{padding:6px 7px;font-size:11px}.legend{gap:10px}}
+@media(max-width:600px){main{padding:0 8px}th,td{padding:6px 7px;font-size:11px}.legend{gap:10px;padding:8px 12px}}
 </style>
 </head>
 <body>
@@ -57,8 +60,9 @@ tr.row-added:hover td{background:#E5ECFF}
 </header>
 <div class="legend">
   <span class="legend-item"><span class="legend-dot" style="background:#F0FAF2;border:2px solid #22863a"></span> Suggested pick</span>
-  <span class="legend-item"><span class="legend-dot" style="background:#F0F4FF;border:2px solid #1a6cc0"></span> Added for you to consider</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#F0F4FF;border:2px solid #1a6cc0"></span> Added for comparison</span>
   <span class="legend-item"><span class="legend-dot" style="background:#fff;border:1px solid #E8E8E5"></span> In your sheet</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#1a1a1a;border:1px solid #1a1a1a"></span> Purchased ✓</span>
 </div>
 <main>
 
@@ -67,9 +71,7 @@ tr.row-added:hover td{background:#E5ECFF}
 <div>
   <div class="section-title">Travel System</div>
   <div class="buy-note">
-    <strong>Before you decide:</strong> Both Cloud T and Cloud T Plus bases require ISOFIX — check your car has it.
-    <strong>Joie vs Bugaboo:</strong> Same Cybex Cloud T car seat in both — the price difference is purely the pushchair. Joie Finiti is heavier (11.21 kg vs Bugaboo ~9 kg) but has spring suspension and puncture-proof tyres.
-    <strong>Cloud T vs Cloud T Plus:</strong> Plus adds a lie-flat position for newborns in the car — useful for longer journeys. Check the price gap before deciding.
+    <strong>Before you decide:</strong> Both Cloud T and Cloud T Plus bases require ISOFIX — check your car has it. <strong>Joie vs Bugaboo:</strong> Same Cybex car seat family, Joie significantly cheaper but heavier (11.21 kg vs ~9 kg). <strong>Cloud T vs Cloud T Plus:</strong> Plus adds lie-flat for newborns in the car — useful for longer journeys.
   </div>
   <div class="tbl-wrap">
     <table>
@@ -77,6 +79,28 @@ tr.row-added:hover td{background:#E5ECFF}
         <th>Brand / Option</th><th>Shop</th><th>Price</th><th>What's Included</th><th>Age Range</th><th>Key Features</th><th>Notes</th><th>Status</th><th>Link</th>
       </tr></thead>
       <tbody>
+        <tr class="data-row row-purchased">
+          <td><strong>✓ Joie Finiti Flex + Cybex Cloud T Plus</strong><span class="cell-note">Evergreen / Mirage Grey</span></td>
+          <td>UK Baby Centre</td>
+          <td><span class="price-blank">—</span></td>
+          <td>Finiti pushchair, Ramble XL carrycot, Cloud T Plus seat, Base T, raincover, adaptors</td>
+          <td>Pushchair: Birth–22 kg<br>Carrycot: Birth–9 kg</td>
+          <td><span class="tag tag-green">Cloud T Plus — lie-flat</span> <span class="tag tag-blue">4-in-1 pushchair</span> <span class="tag tag-blue">Spring suspension</span> <span class="tag tag-blue">Puncture-proof tyres</span></td>
+          <td>Purchased ✓</td>
+          <td><span class="status s-purchased">✓ Purchased</span></td>
+          <td><a class="tbl-link" href="https://ukbabycentre.com/products/joie-finiti-flex-cloud-t-plus-travel-system-evergreen-mirage-grey" target="_blank">↗ View</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Joie Finiti Flex + Cybex Cloud T</strong><span class="cell-note">Standard Cloud T · Evergreen</span></td>
+          <td>UK Baby Centre</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td>Finiti pushchair, Ramble XL carrycot, Cloud T seat, Base T, raincover, adaptors</td>
+          <td>Pushchair: Birth–22 kg<br>Carrycot: Birth–9 kg</td>
+          <td><span class="tag tag-blue">Standard Cloud T</span> <span class="tag tag-blue">4-in-1 pushchair</span> <span class="tag tag-blue">Spring suspension</span></td>
+          <td>~£96 less than Cloud T Plus. No lie-flat position.</td>
+          <td><span class="status s-sheet">In sheet</span></td>
+          <td><a class="tbl-link" href="https://ukbabycentre.com/products/joie-finiti-flex-cloud-t-travel-system-evergreen" target="_blank">↗ UK Baby Centre</a></td>
+        </tr>
         <tr class="data-row">
           <td><strong>Bugaboo Dragonfly + Cybex Cloud T</strong><span class="cell-note">8-piece bundle · Grey Melange</span></td>
           <td>Mamas &amp; Papas</td>
@@ -84,7 +108,7 @@ tr.row-added:hover td{background:#E5ECFF}
           <td>Pushchair, carrycot, footmuff, cup holder, changing bag, raincover, Cloud T seat, Base T</td>
           <td>Birth–22 kg</td>
           <td><span class="tag tag-blue">~9 kg pushchair</span> <span class="tag tag-blue">Seat stays on fold</span> <span class="tag tag-green">ADAC-tested seat</span></td>
-          <td>Original link in your sheet. M&amp;P will price match John Lewis.</td>
+          <td>Original link in sheet. M&amp;P will price match John Lewis.</td>
           <td><span class="status s-sheet">In sheet</span></td>
           <td><a class="tbl-link" href="https://www.mamasandpapas.com/collections/travel-systems/products/b-boo-d-fly-ulti-kit-cloudt-gr-4037aa709" target="_blank">↗ M&amp;P</a></td>
         </tr>
@@ -95,36 +119,13 @@ tr.row-added:hover td{background:#E5ECFF}
           <td>Same 8-piece bundle as M&amp;P</td>
           <td>Birth–22 kg</td>
           <td><span class="tag tag-green">2yr guarantee</span> <span class="tag tag-blue">Free returns</span></td>
-          <td>Price varies by colour — check your preferred shade before comparing with M&amp;P.</td>
+          <td>Price varies by colour.</td>
           <td><span class="status s-compare">Compare</span></td>
           <td><a class="tbl-link" href="https://www.johnlewis.com/browse/baby-child/buggies-travel/baby-travel-systems/bugaboo-dragonfly/_/N-8h2Zpei9" target="_blank">↗ John Lewis</a></td>
-        </tr>
-        <tr class="data-row row-best">
-          <td><strong>★ Joie Finiti Flex + Cybex Cloud T</strong><span class="cell-note">Evergreen colour</span></td>
-          <td>UK Baby Centre</td>
-          <td><span class="price-blank">Check link</span></td>
-          <td>Finiti pushchair, Ramble XL carrycot, Cloud T seat, Base T, raincover, adaptors</td>
-          <td>Pushchair: Birth–22 kg<br>Carrycot: Birth–9 kg</td>
-          <td><span class="tag tag-green">Same Cloud T seat</span> <span class="tag tag-blue">4-in-1 pushchair</span> <span class="tag tag-blue">Spring suspension</span> <span class="tag tag-blue">Puncture-proof tyres</span></td>
-          <td>Significantly cheaper than Bugaboo. Same proven Cloud T car seat. Heavier at 11.21 kg.</td>
-          <td><span class="status s-sheet">In sheet</span></td>
-          <td><a class="tbl-link" href="https://ukbabycentre.com/products/joie-finiti-flex-cloud-t-travel-system-evergreen" target="_blank">↗ UK Baby Centre</a></td>
-        </tr>
-        <tr class="data-row">
-          <td><strong>Joie Finiti Flex + Cybex Cloud T Plus</strong><span class="cell-note">Evergreen / Mirage Grey</span></td>
-          <td>UK Baby Centre</td>
-          <td><span class="price-blank">Check link</span></td>
-          <td>Finiti pushchair, Ramble XL carrycot, Cloud T Plus seat, Base T, raincover, adaptors</td>
-          <td>Pushchair: Birth–22 kg<br>Carrycot: Birth–9 kg</td>
-          <td><span class="tag tag-green">Cloud T Plus — lie-flat</span> <span class="tag tag-blue">4-in-1 pushchair</span> <span class="tag tag-blue">Spring suspension</span></td>
-          <td>~£96 more than standard Cloud T version. Lie-flat useful for longer car journeys with a newborn.</td>
-          <td><span class="status s-sheet">In sheet</span></td>
-          <td><a class="tbl-link" href="https://ukbabycentre.com/products/joie-finiti-flex-cloud-t-plus-travel-system-evergreen-mirage-grey" target="_blank">↗ UK Baby Centre</a></td>
         </tr>
       </tbody>
     </table>
   </div>
-</div>
 
 <!-- ═══════════════════ NEXT TO ME CRIB ═══════════════════ -->
 
@@ -132,13 +133,13 @@ tr.row-added:hover td{background:#E5ECFF}
   <div class="section-title">Next to Me Crib</div>
   <div class="buy-note">
     <strong>Before you decide:</strong>
-    <strong>Babylo</strong> — freestanding only, no drop-down side.
-    <strong>Silver Cross Lunar</strong> — attaches to a bed frame with legs; does NOT work with a flat divan base.
-    <strong>SnuzPod5</strong> — works with divan beds up to 70.5 cm; 3-in-1 with portable bassinet; UK bestseller.
+    <strong>Babylo</strong> — freestanding only, no drop-down side for night feeds.
+    <strong>Silver Cross Lunar</strong> — attaches to bed frame only; will NOT work on a flat divan.
+    <strong>SnuzPod5</strong> — works with divan beds up to 70.5 cm; bassinet lifts off; UK bestseller.
     <strong>Lua</strong> — M&amp;P own brand, newer with fewer reviews.
-    <strong>Tutti Bambini CoZee</strong> — rated #1 in 2026 by Testix; good value, folds in 30 seconds, works with any bed.
-    <strong>Chicco Next2Me Magic Evo</strong> — Mumsnet #1 pick 2026; one-hand drop side, rocking mode, 3yr guarantee; covers hand-wash only.
-    <strong>Maxi-Cosi Iora Air</strong> — best breathability, mesh all round; premium price.
+    <strong>CoZee</strong> — rated #1 bedside crib 2026 (Testix, 1,900+ reviews); any bed type; folds in 30 sec.
+    <strong>Chicco Next2Me Magic Evo</strong> — Mumsnet #1 2026; one-hand drop side; covers hand-wash only.
+    <strong>Maxi-Cosi Iora Air</strong> — best breathability (mesh all round); premium price.
   </div>
   <div class="tbl-wrap">
     <table>
@@ -153,7 +154,7 @@ tr.row-added:hover td{background:#E5ECFF}
           <td><span class="tag tag-grey">N/A — freestanding</span></td>
           <td>Mesh sides, storage shelf, mattress included. No drop-down side.</td>
           <td>Birth–6 months (9 kg)</td>
-          <td>Cannot reach baby without picking them up at night. Fine as a daytime room crib only.</td>
+          <td>Cannot reach baby at night without picking them up. Fine as daytime room crib only.</td>
           <td><span class="status s-sheet">In sheet</span></td>
           <td><a class="tbl-link" href="https://www.smythstoys.com/brand/babylo/babylo-you-and-me-crib-cashmere/p/253805" target="_blank">↗ Smyths</a></td>
         </tr>
@@ -170,14 +171,14 @@ tr.row-added:hover td{background:#E5ECFF}
         </tr>
         <tr class="data-row row-best">
           <td><strong>★ SnuzPod5 Bedside Crib</strong><span class="cell-note">Natural · UK bestseller · 1M+ sold</span></td>
-          <td>Mamas &amp; Papas</td>
+          <td>Mamas &amp; Papas / Snuz direct</td>
           <td><span class="price-blank">Check link</span></td>
           <td><span class="tag tag-green">Yes — up to 70.5 cm</span></td>
-          <td>3-in-1: bedside / standalone rocking / portable bassinet. Breathable mesh, 3D mattress, lift-off bassinet, wheels, incline mode.</td>
+          <td>3-in-1: bedside / standalone rocking / portable bassinet. Breathable mesh, 3D mattress, lift-off bassinet, wheels, incline.</td>
           <td>Birth–6 months (9 kg)</td>
-          <td>Most versatile — bassinet lifts off for room-to-room use. Triple Platinum Loved by Parents award. Also check Snuz.co.uk for price.</td>
+          <td>Most versatile — bassinet lifts off for room-to-room use. Compare M&amp;P vs Snuz.co.uk price.</td>
           <td><span class="status s-sheet">In sheet</span></td>
-          <td><a class="tbl-link" href="https://www.mamasandpapas.com/products/snuzpod5-bedside-crib-natural-689402800" target="_blank">↗ M&amp;P</a>&nbsp;&nbsp;<a class="tbl-link" href="https://www.snuz.co.uk/products/snuzpod5-bedside-crib-natural" target="_blank">↗ Snuz direct</a></td>
+          <td><a class="tbl-link" href="https://www.mamasandpapas.com/products/snuzpod5-bedside-crib-natural-689402800" target="_blank">↗ M&amp;P</a>&nbsp;&nbsp;<a class="tbl-link" href="https://www.snuz.co.uk/products/snuzpod5-bedside-crib-natural" target="_blank">↗ Snuz</a></td>
         </tr>
         <tr class="data-row">
           <td><strong>Lua Bedside Crib</strong><span class="cell-note">Fawn · M&amp;P own brand</span></td>
@@ -186,40 +187,40 @@ tr.row-added:hover td{background:#E5ECFF}
           <td><span class="tag tag-green">Yes</span></td>
           <td>Drop-down side, wooden frame, height adjustable, mattress included</td>
           <td>Birth–6 months (9 kg)</td>
-          <td>Newer M&amp;P own brand — fewer reviews than SnuzPod5. Worth considering if noticeably cheaper.</td>
+          <td>Newer M&amp;P brand — fewer reviews than SnuzPod5. Worth it if noticeably cheaper.</td>
           <td><span class="status s-sheet">In sheet</span></td>
           <td><a class="tbl-link" href="https://www.mamasandpapas.com/products/lua-bedside-crib-fawn-bclusm600" target="_blank">↗ M&amp;P</a></td>
         </tr>
         <tr class="data-row row-added">
-          <td><strong>Tutti Bambini CoZee</strong><span class="cell-note">Added for comparison · #1 rated 2026 Testix</span></td>
-          <td>Amazon / John Lewis</td>
+          <td><strong>Tutti Bambini CoZee</strong><span class="cell-note">Added · #1 rated Testix 2026</span></td>
+          <td>John Lewis / Amazon</td>
           <td><span class="price-blank">Check link</span></td>
           <td><span class="tag tag-green">Yes — any bed</span></td>
-          <td>Drop-down zip side, 6 height settings, anti-reflux incline, folds in 30 seconds, machine-washable cover, storage shelf, mattress included</td>
+          <td>Drop-down zip side, 6 heights, anti-reflux incline, folds in 30 sec, machine-washable cover, storage shelf, mattress included</td>
           <td>Birth–6 months (9 kg)</td>
-          <td>Rated #1 bedside crib 2026 (Testix, 1,900+ reviews). Less bulky than Chicco. Good value. Zip mechanism can be fiddly one-handed.</td>
+          <td>#1 bedside crib 2026 (Testix, 1,900+ reviews). Less bulky than Chicco. Zip side slightly fiddly one-handed.</td>
           <td><span class="status s-added">Added</span></td>
           <td><a class="tbl-link" href="https://www.johnlewis.com/tutti-bambini-cozee-bedside-crib/p112349000" target="_blank">↗ John Lewis</a>&nbsp;&nbsp;<a class="tbl-link" href="https://www.amazon.co.uk/s?k=tutti+bambini+cozee+bedside+crib" target="_blank">↗ Amazon</a></td>
         </tr>
         <tr class="data-row row-added">
-          <td><strong>Chicco Next2Me Magic Evo</strong><span class="cell-note">Added for comparison · Mumsnet #1 2026</span></td>
+          <td><strong>Chicco Next2Me Magic Evo</strong><span class="cell-note">Added · Mumsnet #1 2026</span></td>
           <td>John Lewis / Very</td>
-          <td><span class="price-blank">Check link — ~£140</span></td>
+          <td><span class="price-blank">~£140 — check link</span></td>
           <td><span class="tag tag-green">Yes — any bed</span></td>
-          <td>One-hand drop side (sliding), rocking mode, 3D mesh mattress, 2 mesh windows, travel bag, 3yr guarantee (1yr + 2yr on registration)</td>
+          <td>One-hand sliding drop side, rocking mode, 3D mesh mattress, 2 mesh windows, travel bag, 3yr guarantee</td>
           <td>Birth–6 months (9 kg)</td>
-          <td>Mumsnet #1 co-sleeper 2026. One-hand drop side is standout for night feeds. Covers hand-wash only — minor inconvenience. Larger than CoZee (82.5 × 73 cm).</td>
+          <td>Mumsnet #1 co-sleeper 2026. One-hand drop side is standout. Covers are hand-wash only. Larger than CoZee (82.5 × 73 cm).</td>
           <td><span class="status s-added">Added</span></td>
           <td><a class="tbl-link" href="https://www.johnlewis.com/chicco-next2me-magic-evo-bedside-crib/p112349600" target="_blank">↗ John Lewis</a>&nbsp;&nbsp;<a class="tbl-link" href="https://www.very.co.uk/chicco-next2me-magic-evo-bedside-crib/1601068903.prd" target="_blank">↗ Very</a></td>
         </tr>
         <tr class="data-row row-added">
-          <td><strong>Maxi-Cosi Iora Air</strong><span class="cell-note">Added for comparison · best breathability</span></td>
-          <td>John Lewis / Mamas &amp; Papas</td>
-          <td><span class="price-blank">Check link — ~£230</span></td>
-          <td><span class="tag tag-green">Yes</span></td>
-          <td>Mesh panels all round (best airflow of any crib), drop-down side, height adjustable, anti-reflux incline, mattress included</td>
+          <td><strong>Maxi-Cosi Iora Air</strong><span class="cell-note">Added · best breathability 2026</span></td>
+          <td>John Lewis / M&amp;P</td>
+          <td><span class="price-blank">~£230 — check link</span></td>
+          <td><span class="tag tag-green">Yes — any bed</span></td>
+          <td>Mesh panels on all 4 sides (best airflow), drop-down side, height adjustable, anti-reflux incline, mattress included</td>
           <td>Birth–6 months (9 kg)</td>
-          <td>Best breathability — mesh on all 4 sides keeps baby coolest. Premium price. Named best for breathability by Mumsnet 2026.</td>
+          <td>Best breathability — named best for breathability Mumsnet 2026. Premium price. Worth it for a warm bedroom.</td>
           <td><span class="status s-added">Added</span></td>
           <td><a class="tbl-link" href="https://www.johnlewis.com/maxi-cosi-iora-air-co-sleeper-crib/p6423793" target="_blank">↗ John Lewis</a>&nbsp;&nbsp;<a class="tbl-link" href="https://www.mamasandpapas.com/collections/cribs-bassinets/products/iora-air-bedside-crib" target="_blank">↗ M&amp;P</a></td>
         </tr>
@@ -232,25 +233,392 @@ tr.row-added:hover td{background:#E5ECFF}
 
 <div>
   <div class="section-title">Moses Basket</div>
-  <div class="buy-note">
-    <strong>Note:</strong> Used for the first 6–8 weeks, usually downstairs for daytime naps — not a replacement for your bedside crib. Kinder Valley is rated 4.6/5 from 100+ reviews. The included mattress is 3 cm thin — some parents buy a replacement (~£15 from Argos).
-  </div>
+  <div class="buy-note"><strong>Note:</strong> Used for the first 6–8 weeks, usually downstairs for daytime naps — not a replacement for your bedside crib.</div>
   <div class="tbl-wrap">
     <table>
       <thead><tr>
         <th>Brand / Option</th><th>Shop</th><th>Price</th><th>Stand Type</th><th>Key Features</th><th>Rating</th><th>Notes</th><th>Status</th><th>Link</th>
       </tr></thead>
       <tbody>
-        <tr class="data-row row-best">
-          <td><strong>★ Kinder Valley Waffle Palm + Folding Stand</strong><span class="cell-note">In your sheet</span></td>
+        <tr class="data-row row-purchased">
+          <td><strong>✓ Clair de Lune White Waffle Palm Moses Basket + Folding Stand</strong><span class="cell-note">White · Natural pine folding stand</span></td>
+          <td>Clair de Lune</td>
+          <td><span class="price-blank">—</span></td>
+          <td>Natural pine folding stand</td>
+          <td>Handwoven palm leaf, waffle cotton dressing, fibre mattress, adjustable hood, coverlet. Machine washable.</td>
+          <td>4.8 / 5</td>
+          <td>Purchased ✓ — handwoven palm leaf, Oeko-Tex certified mattress cover, BS EN 1466:2023 safety standard.</td>
+          <td><span class="status s-purchased">✓ Purchased</span></td>
+          <td><a class="tbl-link" href="https://clair-de-lune.co.uk/products/waffle-palm-moses-basket" target="_blank">↗ View</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Kinder Valley Waffle Palm + Folding Stand</strong><span class="cell-note">In your sheet</span></td>
           <td>Argos</td>
           <td><span class="price-blank">Check link</span></td>
           <td>Pine folding stand</td>
           <td>Cotton waffle bedding, water-resistant mattress, hood included</td>
           <td>4.6 / 5 (100+ reviews)</td>
-          <td>Solid value pick. Mattress is 3 cm — consider a replacement. Sheet size: L86 × W47 cm.</td>
+          <td>Good value alternative. Mattress 3 cm thin — some parents buy a replacement (~£15 extra).</td>
           <td><span class="status s-sheet">In sheet</span></td>
           <td><a class="tbl-link" href="https://www.argos.co.uk/product/9441787" target="_blank">↗ Argos</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════════ COT BED ═══════════════════ -->
+
+<div>
+  <div class="section-title">Cot Bed</div>
+  <div class="buy-note">
+    <strong>No rush</strong> — needed around 6 months. Key checks: does it convert to a toddler bed (extends use to age 4–5)? Mattress usually sold separately — budget £50–80 extra. Solid wood is safer and longer-lasting than MDF.
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Brand / Option</th><th>Shop</th><th>Price</th><th>Material</th><th>Converts to toddler?</th><th>Key Features</th><th>Notes</th><th>Status</th><th>Link</th>
+      </tr></thead>
+      <tbody>
+        <tr class="data-row">
+          <td><strong>IKEA SNIGLAR</strong></td>
+          <td>IKEA</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td>Solid beech</td>
+          <td><span class="tag tag-red">No</span></td>
+          <td>2 mattress heights, simple design, unpainted</td>
+          <td>Ultra budget, safe. Mattress sold separately (~£40). No conversion to toddler bed.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.ikea.com/gb/en/p/sniglar-cot-beech-30248537/" target="_blank">↗ IKEA</a></td>
+        </tr>
+        <tr class="data-row row-best">
+          <td><strong>★ Obaby Stamford Classic</strong></td>
+          <td>Obaby</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td>Solid pine</td>
+          <td><span class="tag tag-green">Yes — to toddler bed</span></td>
+          <td>3 mattress heights, under-drawer storage, teething rails, sleigh design</td>
+          <td>Award-winning, widely stocked in UK. Mattress sold separately.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.obaby.co.uk/collections/stamford-white" target="_blank">↗ Obaby</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Mamas &amp; Papas Aura</strong></td>
+          <td>M&amp;P</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td>Wood composite</td>
+          <td><span class="tag tag-green">Yes — to toddler bed</span></td>
+          <td>Adjustable base, modern look</td>
+          <td>Good if buying other M&amp;P furniture. Mattress sold separately.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.mamasandpapas.com/collections/cot-beds" target="_blank">↗ M&amp;P</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>John Lewis Cot Beds range</strong></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td>Solid wood</td>
+          <td><span class="tag tag-green">Yes — to toddler bed</span></td>
+          <td>Multiple styles, 2yr guarantee</td>
+          <td>Worth buying here if ordering other JL items to combine guarantee benefits.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/browse/baby-child/furniture-bedding/cot-beds/_/N-1pj6" target="_blank">↗ John Lewis</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════════ BABY BOUNCER ═══════════════════ -->
+
+<div>
+  <div class="section-title">Baby Bouncer</div>
+  <div class="buy-note">
+    <strong>Not for sleep</strong> — for awake time hands-free. Manual (baby's movement rocks it, no batteries, lighter) vs electric swing (motorised, more space). Most UK parents start with manual. Check if newborn insert is included.
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Brand / Option</th><th>Shop</th><th>Price</th><th>Type</th><th>Age Range</th><th>Newborn insert?</th><th>Key Features</th><th>Notes</th><th>Status</th><th>Link</th>
+      </tr></thead>
+      <tbody>
+        <tr class="data-row">
+          <td><strong>Chicco Hoopla</strong></td>
+          <td>Smyths</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-grey">Manual</span></td>
+          <td>Birth–9 kg</td>
+          <td><span class="tag tag-amber">Check listing</span></td>
+          <td>Lightweight, machine washable</td>
+          <td>Budget option. Basic features only.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.smythstoys.com/uk/en-gb/baby/baby-essentials/baby-bouncers-and-rockers/c/SM0602060501" target="_blank">↗ Smyths</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Maxi-Cosi Kori 4-in-1</strong></td>
+          <td>M&amp;P</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-grey">Manual</span></td>
+          <td>Birth–9 kg</td>
+          <td><span class="tag tag-green">Included</span></td>
+          <td>4-in-1, folds flat, compact</td>
+          <td>Silver MadeForMums 2025 award.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.mamasandpapas.com/collections/bouncers-rockers" target="_blank">↗ M&amp;P</a></td>
+        </tr>
+        <tr class="data-row row-best">
+          <td><strong>★ Ergobaby Evolve 3-in-1</strong></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-grey">Manual</span></td>
+          <td>Birth–13 kg (~2 yrs)</td>
+          <td><span class="tag tag-green">Included</span></td>
+          <td>3 height settings, Oeko-Tex fabric, folds flat, no batteries</td>
+          <td>Longest age range. Toy bar sold separately (~£50).</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/ergobaby-evolve-baby-bouncer/p113381853" target="_blank">↗ John Lewis</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>BabyBjörn Bouncer Bliss</strong></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-grey">Manual</span></td>
+          <td>Birth–13.2 kg (~2 yrs)</td>
+          <td><span class="tag tag-green">Included</span></td>
+          <td>Very lightweight (3.8 kg), machine washable, iconic design</td>
+          <td>Premium price for a manual bouncer. Very well made.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/babybjorn-baby-bouncer-bliss/p4033406" target="_blank">↗ John Lewis</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════════ BATH TUB ═══════════════════ -->
+
+<div>
+  <div class="section-title">Bath Tub</div>
+  <div class="buy-note">
+    <strong>Not needed on day one</strong> — you top-and-tail for the first few weeks. Do you have a bath or just a shower? Some baby baths rest inside an adult bath. Shnuggle is significantly cheaper at Smyths than anywhere else — check that price first.
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Brand / Option</th><th>Shop</th><th>Price</th><th>Age Range</th><th>Key Features</th><th>Notes</th><th>Status</th><th>Link</th>
+      </tr></thead>
+      <tbody>
+        <tr class="data-row row-best">
+          <td><strong>★ Shnuggle Baby Bath Tub</strong><span class="cell-note">Check Smyths — much cheaper here</span></td>
+          <td>Smyths / John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td>Birth–12 months</td>
+          <td><span class="tag tag-green">Bum bump support</span> <span class="tag tag-blue">Plug for drain</span> <span class="tag tag-blue">Compact</span> <span class="tag tag-green">Multi-award winning</span></td>
+          <td>Midwife-recommended. Significant price difference between Smyths and JL — check both.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.smythstoys.com/uk/en-gb/baby/baby-essentials/bathing-changing-and-potty-training/baby-baths/shnuggle-baby-bath-tub/p/208504" target="_blank">↗ Smyths</a>&nbsp;&nbsp;<a class="tbl-link" href="https://www.johnlewis.com/shnuggle-baby-bath-tub/p4934026" target="_blank">↗ JL</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Stokke Flexi Bath</strong></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td>Birth–toddler</td>
+          <td><span class="tag tag-blue">Folds flat</span> <span class="tag tag-blue">Great for travel</span></td>
+          <td>Good for small bathrooms or travel. Less newborn support than Shnuggle.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/browse/baby-child/bathing-changing/baby-bathing/_/N-1q4c" target="_blank">↗ John Lewis</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Angelcare Bath Support</strong></td>
+          <td>Smyths</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td>Birth–6 months</td>
+          <td><span class="tag tag-blue">Sits inside adult bath</span> <span class="tag tag-green">Nothing to store</span></td>
+          <td>Mesh seat sits inside your existing adult bath. Needs a full-size bath to work.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.smythstoys.com/uk/en-gb/baby/baby-essentials/bathing-changing-and-potty-training/baby-baths/c/SM060207" target="_blank">↗ Smyths</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════════ BOTTLE STERILISER ═══════════════════ -->
+
+<div>
+  <div class="section-title">Bottle Steriliser</div>
+  <div class="buy-note">
+    <strong>Only needed if bottle feeding.</strong> York has hard water — electric steam sterilisers need descaling every 2–3 weeks. UV model avoids this entirely (no water). If you use MAM bottles, they self-sterilise in the microwave so you may not need one at all.
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Brand / Option</th><th>Shop</th><th>Price</th><th>Type</th><th>Cycle Time</th><th>Capacity</th><th>Notes</th><th>Status</th><th>Link</th>
+      </tr></thead>
+      <tbody>
+        <tr class="data-row">
+          <td><strong>Milton Microwave / Cold Water</strong></td>
+          <td>Smyths</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-grey">Microwave / cold</span></td>
+          <td>4 min / 15 min</td>
+          <td>4–6 bottles</td>
+          <td>Cheapest option. No electricity for cold method. Tablets are an ongoing cost.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.smythstoys.com/uk/en-gb/baby/bottle-feeding/sterilising/c/SM060501" target="_blank">↗ Smyths</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Tommee Tippee Super-Steam</strong></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-blue">Electric steam</span></td>
+          <td>5 min</td>
+          <td>6 bottles</td>
+          <td>UK bestseller. Stays sterile 24hr if lid closed. Needs descaling in York hard water.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/tommee-tippee-super-steam-advanced-electric-steriliser/p5086407" target="_blank">↗ John Lewis</a></td>
+        </tr>
+        <tr class="data-row row-best">
+          <td><strong>★ Tommee Tippee QuickDry (steam + dryer)</strong></td>
+          <td>Amazon</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-blue">Steam + dryer</span></td>
+          <td>26 min full cycle</td>
+          <td>6 bottles</td>
+          <td>Sterilises AND dries — no wet bottles. Worth the extra £30 over steam-only.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.amazon.co.uk/Tommee-Tippee-Steriliser-Accessories-26-Minute/dp/B086Q73T7N" target="_blank">↗ Amazon</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Tommee Tippee Ultra UV 3-in-1</strong><span class="cell-note">Best for hard water areas</span></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-blue">UV — no water</span></td>
+          <td>35 min</td>
+          <td>6 bottles</td>
+          <td>No water, no descaling — ideal for York. Quietest option. Higher upfront cost.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/tommee-tippee-ultra-uv-3-in-1-electric-steriliser-and-dryer/p5860616" target="_blank">↗ John Lewis</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════════ MILK BOTTLES ═══════════════════ -->
+
+<div>
+  <div class="section-title">Milk Bottles</div>
+  <div class="buy-note">
+    <strong>Do not bulk-buy before birth</strong> — babies can be fussy about teat shape. Start with just 2–3 bottles (150 ml size). MAM bottles self-sterilise in the microwave — if you go with MAM you may not need a separate steriliser at all.
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Brand / Option</th><th>Shop</th><th>Price</th><th>Self-sterilising?</th><th>Best for</th><th>Notes</th><th>Status</th><th>Link</th>
+      </tr></thead>
+      <tbody>
+        <tr class="data-row">
+          <td><strong>Tommee Tippee Natural Start</strong></td>
+          <td>Smyths</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-green">Yes (microwave)</span></td>
+          <td>Breastfed babies</td>
+          <td>Most widely available in UK. Good starting point.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.smythstoys.com/uk/en-gb/baby/bottle-feeding/c/SM06050201" target="_blank">↗ Smyths</a></td>
+        </tr>
+        <tr class="data-row row-best">
+          <td><strong>★ MAM Anti-Colic</strong></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-green">Yes (3 min microwave)</span></td>
+          <td>Colic, combo feeding</td>
+          <td>Self-sterilises in microwave — may not need separate steriliser. Anti-colic vented base.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/browse/baby-child/feeding/baby-bottles/mam/_/N-1z14378Z8d8" target="_blank">↗ John Lewis</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Dr Brown's Options+</strong></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-red">No — needs steriliser</span></td>
+          <td>Severe colic / reflux</td>
+          <td>Most effective for severe colic. More parts to clean.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/browse/baby-child/feeding/baby-bottles/dr-brown-s/_/N-1z14038Z8d8" target="_blank">↗ John Lewis</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Philips Avent Natural Response</strong></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-red">No</span></td>
+          <td>Breastfed babies</td>
+          <td>Flexible teat mimics breastfeeding motion. Wide neck, easy to clean.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/browse/baby-child/feeding/baby-bottles/philips-avent/_/N-1z14081Z8d8" target="_blank">↗ John Lewis</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════════ BABY MONITOR ═══════════════════ -->
+
+<div>
+  <div class="section-title">Baby Monitor / Camera</div>
+  <div class="buy-note">
+    <strong>Dedicated unit</strong> (own screen, no WiFi needed, works if broadband is down, more private) vs <strong>WiFi/app</strong> (uses your phone, richer features but needs internet). Night vision is essential. Two-way audio lets you soothe without going in.
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Brand / Option</th><th>Shop</th><th>Price</th><th>Type</th><th>Screen</th><th>Key Features</th><th>Notes</th><th>Status</th><th>Link</th>
+      </tr></thead>
+      <tbody>
+        <tr class="data-row row-best">
+          <td><strong>★ VTech VM5463</strong></td>
+          <td>Smyths</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-green">Dedicated unit</span></td>
+          <td>5 inch</td>
+          <td><span class="tag tag-green">No WiFi</span> <span class="tag tag-blue">Pan/tilt</span> <span class="tag tag-blue">Ceiling projector</span> <span class="tag tag-blue">Night light</span></td>
+          <td>Reliable no-WiFi unit. Good value. Two-way audio.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.smythstoys.com/uk/en-gb/baby/baby-essentials/baby-bedroom-essentials/vtech-vm5463-star-projector-video-baby-monitor-with-5-inch-screen/p/202158" target="_blank">↗ Smyths</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>LeapFrog LF920HD</strong><span class="cell-note">MadeForMums 2026 best WiFi-free</span></td>
+          <td>Argos</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-green">Dedicated unit</span></td>
+          <td>7 inch HD</td>
+          <td><span class="tag tag-green">No WiFi</span> <span class="tag tag-blue">HD screen</span> <span class="tag tag-blue">Long battery</span></td>
+          <td>Largest HD screen of any dedicated monitor. MadeForMums 2026 best WiFi-free pick.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.argos.co.uk/browse/baby-and-nursery/health-and-safety/baby-monitors/c:29056/" target="_blank">↗ Argos</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Nanit Pro</strong></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-amber">WiFi / app</span></td>
+          <td>App on phone</td>
+          <td><span class="tag tag-blue">Sleep tracking</span> <span class="tag tag-blue">HD overhead camera</span> <span class="tag tag-amber">Subscription needed</span></td>
+          <td>Needs WiFi and subscription for full features.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/browse/baby-child/baby-monitors-cameras/_/N-1pem" target="_blank">↗ John Lewis</a></td>
+        </tr>
+        <tr class="data-row">
+          <td><strong>Owlet Dream Duo</strong></td>
+          <td>John Lewis</td>
+          <td><span class="price-blank">Check link</span></td>
+          <td><span class="tag tag-amber">WiFi / app + wearable</span></td>
+          <td>App + 1080p camera</td>
+          <td><span class="tag tag-blue">Sock: heart rate + oxygen</span> <span class="tag tag-grey">Not a medical device</span></td>
+          <td>Maximum peace of mind. Most expensive. Not a medical device.</td>
+          <td><span class="status s-added">To research</span></td>
+          <td><a class="tbl-link" href="https://www.johnlewis.com/browse/baby-child/baby-monitors-cameras/_/N-1pem" target="_blank">↗ John Lewis</a></td>
         </tr>
       </tbody>
     </table>
